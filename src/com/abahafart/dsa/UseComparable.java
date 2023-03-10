@@ -14,7 +14,7 @@ public class UseComparable {
         Person p5 = new Person("efrain", 96, "miranda flores");
         List<Person> personList = Arrays.asList(p1,p2,p3,p4,p5);
         personList.forEach(System.out::println);
-        Comparator<Person> comparatorName = (person1, person2) -> person1.getName().compareTo(person2.getName());
+        Comparator<Person> comparatorName = Comparator.comparing(Person::getName);
         personList.sort(comparatorName);
         personList.forEach(System.out::println);
     }
