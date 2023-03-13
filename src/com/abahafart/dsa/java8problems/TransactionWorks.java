@@ -65,9 +65,9 @@ public class TransactionWorks {
         return list.stream().anyMatch(transaction -> transaction.getTrader().getCity().equals("Milan"));
     }
 
-    private List<Transaction> sixth(List<Transaction> list) {
-        return list.stream().filter(transaction -> transaction.getTrader().getCity().equals("Cambridge"))
-                .peek(transaction -> System.out.println(transaction.getValue())).collect(Collectors.toList());
+    private void sixth(List<Transaction> list) {
+        list.stream().filter(transaction -> transaction.getTrader().getCity().equals("Cambridge"))
+                .peek(transaction -> System.out.println(transaction.getValue()));
     }
 
     private long seventh(List<Transaction> list) {
