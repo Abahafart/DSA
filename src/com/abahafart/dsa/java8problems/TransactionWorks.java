@@ -41,7 +41,7 @@ public class TransactionWorks {
 
     private List<Transaction> first(List<Transaction> list) {
         return list.stream().filter(transaction -> transaction.getYear() == 2011)
-                .sorted((t1, t2) -> t1.getValue()< t2.getValue() ? t1.getValue() : t2.getValue())
+                .sorted((t1, t2) -> Math.min(t1.getValue(), t2.getValue()))
                 .collect(Collectors.toList());
     }
 
