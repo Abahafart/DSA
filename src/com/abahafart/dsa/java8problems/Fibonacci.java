@@ -10,7 +10,7 @@ public class Fibonacci {
     }
 
     private static void withStream(int limit) {
-        Stream.iterate(new int[]{0,1}, t -> new int[]{t[1], t[0] + t[1]}).limit(10).map(b -> b[0])
+        Stream.iterate(new int[]{0,1}, t -> new int[]{t[1], t[0] + t[1]}).limit(limit).map(b -> b[0])
                 .forEach(System.out::println);
     }
 
