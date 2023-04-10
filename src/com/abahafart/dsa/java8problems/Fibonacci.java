@@ -20,12 +20,14 @@ public class Fibonacci {
         if(limit==2) {
             System.out.println(start0);
             System.out.println(start1);
+            return;
         }
-        for(int n=0; n < limit; n++) {
-            System.out.println(start0);
+        System.out.println(start0);
+        for(int n=limit; n >= 2; n--) {
             System.out.println(start1);
-            start0 = start0 + start1;
-            start1 = start0 + start1;
+            int suma = start0 + start1;
+            start0 = start1;
+            start1 = suma;
         }
     }
 
