@@ -11,19 +11,10 @@ public class SaveThePrisoner {
   }
 
   static int calculate(int n, int m, int s) {
-    if (m/ s == n) {
-      return m;
+    int index = (m-1+s-1) % n +1;
+    if (index == 0) {
+      index = n;
     }
-    if (m < n) {
-      if (s == n) {
-        return s - m;
-      } else if (s < n) {
-        return s + (m -1);
-      }
-    }
-    while (m >= n) {
-
-    }
-    return 0;
+    return index;
   }
 }
